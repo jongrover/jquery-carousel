@@ -26,10 +26,17 @@
 
 #prev, #next {
   position: absolute;
-  top: 50%;
+  top: 48.5%;
+  color: white;
+  text-shadow: 2px 2px 0px black, -2px -2px 0px black;
 }
 #prev { left: 0; }
 #next { right: 0; }
+
+#prev:hover, #next:hover {
+  color: black;
+  text-shadow: 2px 2px 0px white, -2px -2px 0px white;
+}
 
 
 

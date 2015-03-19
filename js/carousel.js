@@ -29,4 +29,13 @@ $(function(){
     $('#tray').animate({right: position}, 400);
   });
 
+
+  $('#prev, #next').hide();
+
+  $('#frame').hover(function(){
+    $('#prev, #next').show();
+  }, function(){
+    $('#prev, #next').hide();
+  });
+
 });
