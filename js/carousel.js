@@ -9,14 +9,22 @@ $(function(){
 
   $('#next').click(function(event){
     event.preventDefault();
-    scrollValue += 1;
+    if (scrollValue < numberSlides - 1) {
+      scrollValue += 1;
+    } else {
+      scrollValue = 0;
+    }
     var position = scrollValue * slideWidth;
     $('#tray').animate({right: position}, 400);
   });
 
   $('#prev').click(function(event){
     event.preventDefault();
-    scrollValue -= 1;
+    if (scrollValue > 0) {
+      scrollValue -= 1;
+    } else {
+      scrollValue = numberSlides - 1;
+    }
     var position = scrollValue * slideWidth;
     $('#tray').animate({right: position}, 400);
   });
